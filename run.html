@@ -1,1 +1,17 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>RunPilot — Бег</title><link rel="stylesheet" href="./style.css"/><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./config.js"></script><script defer src="./app.js"></script></head><body data-page="run"><div class="app"><header class="top"><a href="./index.html" class="back">←</a><div><h1>Бег</h1><p>План, факт, недельный объём. Без калорий на экране.</p></div><div class="sync-pill" data-sync>Локально</div></header><main class="grid two"><section class="card highlight"><h2>Сегодня</h2><div class="run-today"><b data-run-today>План не задан</b><small data-run-today-sub>Создай план или запиши факт.</small></div><div class="metric-row"><div><small>Неделя</small><b data-run-week>0 км</b></div><div><small>Цель недели</small><b data-run-week-target>50 км</b></div><div><small>RPE</small><b data-run-rpe>—</b></div></div></section><section class="card"><h2>Записать пробежку</h2><form id="run-log-form" class="form"><label>Дата<input name="date" type="date"></label><label>Дистанция, км<input name="km" type="number" step="0.1" min="0" value="0"></label><label>Время, мин<input name="minutes" type="number" min="0" value="0"></label><label>RPE 1–10<input name="rpe" type="number" min="1" max="10" value="5"></label><label>Тип<select name="type"><option>Easy</option><option>Long</option><option>Tempo</option><option>Intervals</option><option>Recovery</option><option>Rest</option></select></label><button>Сохранить</button></form></section><section class="card"><h2>План недели</h2><div id="run-plan-list" class="list"></div></section><section class="card"><h2>Создать простой план</h2><form id="run-plan-form" class="form"><label>Цель недели, км<input name="weekTarget" type="number" value="50"></label><label>Тренировок в неделю<input name="runsPerWeek" type="number" min="2" max="7" value="3"></label><button>Создать план</button></form><p class="muted">Калории бега считаются скрыто и передаются в раздел «Калораж».</p></section><section class="card full"><h2>Объём за 30 дней</h2><canvas id="run-chart" height="130"></canvas></section></main><footer>Создано Amankeldin Beibarys © 2026.</footer></div></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RunPilot — Бег</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./icons.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body data-page="run">
+  <noscript>RunPilot требует включённый JavaScript.</noscript>
+  <div class="shell"><main class="main"><p class="muted">RunPilot загружается...</p></main></div>
+</body>
+</html>

@@ -1,1 +1,17 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>RunPilot — Аккаунт</title><link rel="stylesheet" href="./style.css"/><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./config.js"></script><script defer src="./app.js"></script></head><body data-page="auth"><div class="app"><header class="top"><a href="./index.html" class="back">←</a><div><h1>Аккаунт</h1><p>Синхронизация Supabase, если ключи заданы.</p></div><div class="sync-pill" data-sync>Локально</div></header><main class="grid two"><section class="card"><h2>Вход</h2><form id="auth-form" class="form"><label>Email<input name="email" type="email" placeholder="you@email.com"></label><label>Password<input name="password" type="password"></label><button name="action" value="signin">Войти</button><button name="action" value="signup" class="secondary">Регистрация</button></form><button id="logout" class="ghost">Выйти</button></section><section class="card"><h2>Статус</h2><div id="auth-status" class="list"></div></section></main></div></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RunPilot — Вход</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./icons.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body data-page="auth">
+  <noscript>RunPilot требует включённый JavaScript.</noscript>
+  <div class="shell"><main class="main"><p class="muted">RunPilot загружается...</p></main></div>
+</body>
+</html>

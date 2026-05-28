@@ -1,12 +1,35 @@
-create table if not exists public.marathon_data (
+
+-- RunPilot v16 Supabase setup
+-- Run this in Supabase SQL Editor.
+
+create extension if not exists "uuid-ossp";
+
+create table if not exists public.runpilot_state (
   user_id uuid primary key references auth.users(id) on delete cascade,
   data jsonb not null default '{}'::jsonb,
   updated_at timestamptz not null default now()
 );
-alter table public.marathon_data enable row level security;
-drop policy if exists "own read" on public.marathon_data;
-drop policy if exists "own insert" on public.marathon_data;
-drop policy if exists "own update" on public.marathon_data;
-create policy "own read" on public.marathon_data for select to authenticated using (auth.uid() = user_id);
-create policy "own insert" on public.marathon_data for insert to authenticated with check (auth.uid() = user_id);
-create policy "own update" on public.marathon_data for update to authenticated using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+alter table public.runpilot_state enable row level security;
+
+drop policy if exists "Users can read own RunPilot state" on public.runpilot_state;
+create policy "Users can read own RunPilot state"
+on public.runpilot_state
+for select
+to authenticated
+using ((select auth.uid()) = user_id);
+
+drop policy if exists "Users can insert own RunPilot state" on public.runpilot_state;
+create policy "Users can insert own RunPilot state"
+on public.runpilot_state
+for insert
+to authenticated
+with check ((select auth.uid()) = user_id);
+
+drop policy if exists "Users can update own RunPilot state" on public.runpilot_state;
+create policy "Users can update own RunPilot state"
+on public.runpilot_state
+for update
+to authenticated
+using ((select auth.uid()) = user_id)
+with check ((select auth.uid()) = user_id);

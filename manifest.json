@@ -1,1 +1,9 @@
-{"name":"RunPilot","short_name":"RunPilot","start_url":"./index.html","display":"standalone","background_color":"#f6f7fb","theme_color":"#4f46e5"}
+{
+  "name": "RunPilot",
+  "short_name": "RunPilot",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#2563eb",
+  "description": "USMLE, калораж и бег в одном минимальном cockpit."
+}

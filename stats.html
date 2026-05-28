@@ -1,1 +1,17 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>RunPilot — Статистика</title><link rel="stylesheet" href="./style.css"/><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./config.js"></script><script defer src="./app.js"></script></head><body data-page="stats"><div class="app"><header class="top"><a href="./index.html" class="back">←</a><div><h1>Статистика</h1><p>Общий обзор без смешивания блоков.</p></div><div class="sync-pill" data-sync>Локально</div></header><main class="grid two"><section class="card"><h2>USMLE correct</h2><canvas id="stats-usmle" height="120"></canvas></section><section class="card"><h2>Вес</h2><canvas id="stats-weight" height="120"></canvas></section><section class="card full"><h2>Беговой объём</h2><canvas id="stats-run" height="120"></canvas></section></main></div></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RunPilot — Статистика</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./icons.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body data-page="home">
+  <noscript>RunPilot требует включённый JavaScript.</noscript>
+  <div class="shell"><main class="main"><p class="muted">RunPilot загружается...</p></main></div>
+</body>
+</html>

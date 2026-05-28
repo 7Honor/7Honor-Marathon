@@ -1,4 +1,14 @@
-RunPilot v15 FLAT.
-Upload all files directly to the root of your GitHub Pages repository.
-No folders. No absolute /js or /css paths.
-Edit config.js if you want Supabase sync.
+RUNPILOT V16 — FLAT UPLOAD
+
+1) Delete old files in GitHub repo if possible.
+2) Upload every file from this ZIP directly to the repository root.
+3) Do NOT upload this ZIP as a folder.
+4) In Supabase SQL Editor run supabase_sql.txt.
+5) In Supabase Auth, enable Email/Password provider.
+6) Open:
+   https://7honor.github.io/Marathon/index.html
+
+Files are flat. No folders. No service worker. No PHP needed.
+
+If old version is still visible:
+Chrome → F12 → Application → Storage → Clear site data.

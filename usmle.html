@@ -1,1 +1,17 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>RunPilot — USMLE</title><link rel="stylesheet" href="./style.css"/><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./config.js"></script><script defer src="./app.js"></script></head><body data-page="usmle"><div class="app"><header class="top"><a href="./index.html" class="back">←</a><div><h1>USMLE Tracker</h1><p>Отслеживание, не учебник</p></div><div class="sync-pill" data-sync>Локально</div></header><main class="grid two"><section class="card"><h2>Сегодня</h2><div class="metric-row"><div><small>QBank</small><b data-usmle-today-q>0 / 40</b></div><div><small>Correct</small><b data-usmle-today-rate>0%</b></div><div><small>Anki</small><b data-usmle-today-anki>0 / 300</b></div></div><div class="bars" id="usmle-bars"></div></section><section class="card"><h2>Добавить блок</h2><form id="usmle-form" class="form"><label>Источник<select name="source"><option>UWorld</option><option>AMBOSS</option><option>NBME</option><option>Custom</option></select></label><label>Режим<select name="mode"><option>Timed</option><option>Tutor</option><option>Mixed</option><option>System</option></select></label><label>Система<select name="system"><option value="mixed">Mixed</option><option value="cardio">Cardio</option><option value="pulmo">Pulmo</option><option value="renal">Renal</option><option value="gi">GI</option><option value="neuro">Neuro</option><option value="endo">Endocrine</option><option value="repro">Repro</option><option value="micro">Micro</option><option value="biochem">Biochem</option><option value="pharm">Pharm</option><option value="path">Pathology</option><option value="biostat">Biostat</option></select></label><label>Вопросов<input name="questions" type="number" min="0" value="40"></label><label>Правильно<input name="correct" type="number" min="0" value="0"></label><label>Anki сегодня<input name="anki" type="number" min="0" value="0"></label><label>Ошибок разобрано<input name="reviewed" type="number" min="0" value="0"></label><label>Заметка<textarea name="note" placeholder="Коротко: что просело?"></textarea></label><button>Сохранить</button></form></section><section class="card"><h2>Correct rate 14 дней</h2><canvas id="usmle-chart" height="120"></canvas></section><section class="card"><h2>Weak systems</h2><div id="weak-systems" class="list empty">Пока мало данных.</div></section><section class="card full"><h2>Последние блоки</h2><div id="usmle-blocks" class="list"></div></section></main><footer>Создано Amankeldin Beibarys © 2026.</footer></div></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RunPilot — USMLE</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./icons.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body data-page="usmle">
+  <noscript>RunPilot требует включённый JavaScript.</noscript>
+  <div class="shell"><main class="main"><p class="muted">RunPilot загружается...</p></main></div>
+</body>
+</html>
