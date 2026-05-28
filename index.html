@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RunPilot — Home</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body data-page="home">
+  <main class="home-shell">
+    <section class="home-hero">
+      <div class="brand-row"><div class="logo">↗</div><div><h1>RunPilot</h1><p>Учёба · Калораж · Бег</p></div></div>
+      <div class="sync-pill" data-sync>Локально</div>
+    </section>
+    <section class="tiles-only">
+      <a class="big-tile usmle" href="./usmle.html"><span class="tile-icon">◼</span><h2>USMLE</h2><p>QBank, Anki, correct rate, ошибки.</p><b data-home-usmle>0/40 Q</b></a>
+      <a class="big-tile body" href="./calories.html"><span class="tile-icon">●</span><h2>Калораж</h2><p>Вес, ккал, БЖУ, расход за день.</p><b data-home-calories>— ккал</b></a>
+      <a class="big-tile run" href="./run.html"><span class="tile-icon">◆</span><h2>Бег</h2><p>План, факт, недельный объём.</p><b data-home-run>0 км</b></a>
+    </section>
+    <footer>Создано Amankeldin Beibarys © 2026. Все права защищены.</footer>
+  </main>
+</body>
+</html>

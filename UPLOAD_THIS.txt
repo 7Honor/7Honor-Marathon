@@ -1,0 +1,4 @@
+RunPilot v15 FLAT.
+Upload all files directly to the root of your GitHub Pages repository.
+No folders. No absolute /js or /css paths.
+Edit config.js if you want Supabase sync.
